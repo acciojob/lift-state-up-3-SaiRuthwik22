@@ -5,7 +5,7 @@ import ChildComponent2 from "./ChildComponent2.js"
 import './../styles/App.css';
 
 const App = () => {
-  const [option,setOption] = React.useState('')
+  const [selectedOption,setOption] = React.useState('')
   function handleOption(random){
     setOption(random)
   }
@@ -14,6 +14,7 @@ const App = () => {
         {/* Do not remove the main div */}
     <ChildComponent1 handleOption={handleOption}/>
     <ChildComponent2 handleOption={handleOption}/>
+    <p>Selected Option: {selectedOption}</p>
     </div>
   )
 }
